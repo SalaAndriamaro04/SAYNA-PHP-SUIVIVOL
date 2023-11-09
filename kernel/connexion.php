@@ -14,11 +14,13 @@ class Connexion
     private function __construct(){
         return;
     }
+        // Syntaxe: \PDO pour éviter le conflit de nom
 
     public static function get(){
         if(!isset(self::$pdo))
         {
             try {
+                
                 // Créer la connexion
                 self::$pdo = new \PDO('mysql:host='.DB::HOST.';dbname='.DB::NAME,DB::USERNAME,DB::PASSWORD);
             
@@ -37,6 +39,12 @@ class Connexion
             }
         }
         return self::$pdo;
+    }
+    public static function query($query,$class,$param=[]){
+        //retourne que les objets
+        $stmt=self::get()->prepare($query);
+        $stmt->execute($param);
+        return $stmt->fetchAll(\PDO::FETCH_CLASS,$class);
     }
 
 }

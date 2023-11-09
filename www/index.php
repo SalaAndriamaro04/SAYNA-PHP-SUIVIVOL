@@ -2,7 +2,6 @@
 
 include('../include.php');
 
-Kernel\Connexion::get();
-include('../app/views/index.php');
-
+//var_dump(app\Models\Pays::all());
+var_dump(app\Models\Pays::find(1));
 ?>

@@ -1,13 +1,9 @@
 <?php
 
+//autoload la class se trouvant dans le fichier .php approprié
+//même s'il y a des sous-dossiers pour la trouver
 spl_autoload_register(function($class){
     include('../'.str_replace('\\','/',$class).'.php');
     
-    //générer un tableau à partir d'une chaine en indiquant un séparateur
-    //$dirs=explode('\\',$class);
-    //retourne la dernière valeur du tableau
-    //$fichier=array_pop($dirs);
-    //var_dump($dirs);
-    //var_dump($fichier);
 })
 ?>
