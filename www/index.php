@@ -2,7 +2,7 @@
 
 include('../include.php');
 
-Connexion::get();
+Kernel\Connexion::get();
 include('../app/views/index.php');
 
 ?>

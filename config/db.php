@@ -1,10 +1,16 @@
 <?php
 
+namespace Config;
 
-const DB_HOST='localhost';
-const DB_USERNAME='suividevol';
-const DB_NAME='suividevol';
-const DB_PASSWORD='suividevol';
+class DB
+{
+    const HOST='localhost';
+    const USERNAME='suividevol';
+    const NAME='suividevol';
+    const PASSWORD='suividevol';
+}
+
+
 
 
 ?>

@@ -1,6 +1,11 @@
 <?php
+
+namespace Kernel;
 //..
 //Pattern Singleton pour la connexion
+
+//Utilisation de l'emplacement du fichier DB.php
+use \Config\DB;
 
 class Connexion
 {
@@ -15,17 +20,17 @@ class Connexion
         {
             try {
                 // Créer la connexion
-                self::$pdo = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME,DB_USERNAME,DB_PASSWORD);
+                self::$pdo = new \PDO('mysql:host='.DB::HOST.';dbname='.DB::NAME,DB::USERNAME,DB::PASSWORD);
             
                 //Configuration des options de PDO
-                self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                self::$pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
             
                 //Vous êtes maintenant connecté à la base de donnée
             
                 //... Votre code pour exécuter des requêtes et effectuer des opérations
             
                 
-            } catch (PDOException $e) {
+            } catch (\PDOException $e) {
             
                 // En cas d'erreur de la connexion, affichage du message d'erreur
                 echo "Erreur de connexion : " . $e->getMessage();

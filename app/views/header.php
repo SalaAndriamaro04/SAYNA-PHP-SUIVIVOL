@@ -10,7 +10,7 @@ Back-end: Php
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> <?= APP_NAME ?></title>
+  <title> <?= \Config\App::NAME ?></title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -40,7 +40,7 @@ Back-end: Php
       <div class="container">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0"> <?= APP_NAME ?> </h1>
+            <h1 class="m-0"> <?= \Config\App::NAME ?> </h1>
           </div><!-- /.col -->
           
         </div><!-- /.row -->

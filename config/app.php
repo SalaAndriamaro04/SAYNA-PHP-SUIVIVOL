@@ -1,6 +1,10 @@
 <?php
+namespace Config;
 
-const APP_NAME= 'Suivi de vols';
+class App
+{
+    const NAME= 'Suivi de vols';
+}
 
 
 ?>
