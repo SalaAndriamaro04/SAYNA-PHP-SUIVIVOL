@@ -18,14 +18,14 @@ include('../app/views/header.php');
           echo '<tr>';
           echo '<td>',$p->name,'<td>';
           echo '<td>';
-          // le . veut dire passer par ce fichier index.php
+          // le . veut dire: passer par ce fichier index.php
           // toujours avec ?
-          $url = '.?controller=Pays&action=edit';
+          $url = '.?controller=Pays&action=edit&pays='.$p->id;
           $label= '<i class="fas fa-pen"></i>';
           $type= 'info';
           include ('../app/Views/components/button.php');
           
-          $url = '.?controller=Pays&action=delete';
+          $url = '.?controller=Pays&action=delete&pays='.$p->id;
           $label = '<i class="fa fa-trash"></i>';
           
           //coloration de l'icone en rouge
