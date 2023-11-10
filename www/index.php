@@ -1,7 +1,16 @@
 <?php
 
 include('../include.php');
+//mannuel
+//$controller = new app\Controllers\PaysController();
+//$view = $controller->index();
 
-//var_dump(app\Models\Pays::all());
-var_dump(app\Models\Pays::find(1));
+//Automatiser
+//link + /?controller=pays&action=index
+$controllerName = 'app\\Controllers\\'.$_GET['controller'].'Controller';
+$actionName = $_GET['action'];
+
+$controller = new $controllerName();
+$view = $controller->$actionName();
+$view->display();
 ?>
