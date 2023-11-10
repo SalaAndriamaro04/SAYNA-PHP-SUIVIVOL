@@ -16,7 +16,7 @@ include('../app/views/header.php');
       <?php
         foreach ($pays as $p){
           echo '<tr>';
-          echo '<td>',$p->name,'<td>';
+          echo '<td>',$p->name,'</td>';
           echo '<td>';
           // le . veut dire: passer par ce fichier index.php
           // toujours avec ?
@@ -31,7 +31,7 @@ include('../app/views/header.php');
           //coloration de l'icone en rouge
           $type = 'danger';
           include ('../app/Views/components/button.php');
-          echo '<td>';
+          echo '</td>';
           echo '</tr>';
         }
       ?>

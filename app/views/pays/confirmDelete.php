@@ -8,11 +8,13 @@ include('../app/views/header.php');
 </div>
 
 <div class="row"> 
-    Confirmez la suppression       
+    <h4>Confirmez la suppression</h4>
   <form class="" action=".?controller=Pays&action=deleteConfirm" method="POST">
     <input type="hidden" name="pays" value="<?= $pays->id ?>" />
     <input type="submit" value="Supprimez le pays" />
+    <br>
     <a href=".?controller=Pays&action=index"> Retour </a>
+    <br><br>
   </form>
 </div>
 
