@@ -6,10 +6,10 @@ include('../include.php');
 //$view = $controller->index();
 
 //Automatiser
-//link + /?controller=pays&action=index
 $controllerName = 'app\\Controllers\\'.$_GET['controller'].'Controller';
 $actionName = $_GET['action'];
 
+//link + /?controller=pays&action=index
 $controller = new $controllerName();
 $view = $controller->$actionName();
 $view->display();
